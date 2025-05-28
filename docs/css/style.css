@@ -115,44 +115,36 @@ nav {
 
     .nav-links.active {
         display: flex;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center; /* centraliza o texto */
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 3px 0;
     }
-
-    /* Botão "Agendar Consulta" no mobile fica igual aos outros links */
-    .schedule-button {
-        background: none !important;
-        color: white !important;
-        border: none !important;
-        padding: 10px 0 !important;
-        border-radius: 0 !important;
-        font-weight: normal !important;
-        display: block !important;
-        width: auto !important;
-        text-align: center !important;
-        white-space: normal !important;
-        cursor: pointer !important;
-        transition: none !important;
-    }
-
-    /* Estilo dos links dentro do menu mobile */
-    .nav-links li a,
-    .nav-links li .schedule-button {
-        padding: 10px 0;
-        display: block;
-        font-family: ABeeZee, sans-serif;
-        font-weight: normal;
-        text-decoration: none;
-        color: white;
-    }
-
     .nav-container {
         position: relative; 
     }
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        text-align: center; /* centraliza o texto */
+    }
 }
-
+@media (max-width: 768px) {
+    .schedule-button {
+        background: none;
+        padding: 6px 12px;        
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+        border: 2px solid white;
+        width: auto;             
+    }
+}
 .menu-toggle {
     display: none;       
     font-size: 28px;
