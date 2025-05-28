@@ -82,7 +82,52 @@ nav {
     border: 2px solid white;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.nav-links li a.schedule-button {
+    display: inline-block;
+    background-color: #e63946; /* exemplo de cor */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #8e1618;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+    }
 
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .schedule-button {
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 12px 0;
+        border: 2px solid white;
+        background-color: #e63946; 
+    }
+    .nav-container {
+        position: relative; 
+    }
+}
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -111,9 +156,6 @@ nav {
     }
     .nav-links li {
         margin: 15px 0;
-    }
-    .schedule-button {
-        display: none;
     }
 }
 @media (max-width: 768px) {
