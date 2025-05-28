@@ -16,6 +16,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  min-height: 60px;
 }
 
 nav {
@@ -64,6 +65,8 @@ nav {
   margin-left: 60px;
   align-items: center;
   width: 100%;
+  transition: top 0.2s ease;
+
 }
 
 .nav-links li {

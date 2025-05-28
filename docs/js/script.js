@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  updateMenuTop();
+  setTimeout(updateMenuTop, 50); 
   window.addEventListener("resize", updateMenuTop);
 
   menuToggle.addEventListener("click", () => {
