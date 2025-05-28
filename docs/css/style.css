@@ -123,20 +123,22 @@ nav {
 
     /* Botão fica maior e centralizado no menu mobile */
     .schedule-button {
-        display: block;
-        margin: 15px auto;
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
-        border-radius: 20px;
-        font-weight: bold;
-        padding: 12px 0;
-        border: 2px solid white;
-        background-color: #e63946; 
+        background: none;
+        color: white;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        font-weight: normal;
+        display: inline; /* ou block para que ocupe toda a linha */
+        width: auto;
     }
 
     .nav-container {
         position: relative; 
+    }
+    .nav-links li a {
+        padding: 10px 0;
+        display: block;
     }
 }
 
