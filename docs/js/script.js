@@ -8,7 +8,6 @@ menuToggle.addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
     const navLinks = document.querySelector(".nav-links");
-    const menuToggle = document.querySelector(".menu-toggle");
 
     function updateMenuTop() {
         if (header && navLinks) {
@@ -16,9 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.style.top = height + "px";
         }
     }
-    updateMenuTop();
 
-    window.addEventListener("resize", updateMenuTop); 
 });
 
 function openEmail() {

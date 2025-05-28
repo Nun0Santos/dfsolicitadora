@@ -15,7 +15,8 @@ header {
     position: fixed; 
     top: 0; 
     width: 100%; 
-    z-index: 1000; 
+    z-index: 1000;
+    height: 50px; /* altura fixa */
 }
 
 nav {
@@ -54,14 +55,18 @@ nav {
 
 /* Nav links como flex container */
 .nav-links {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin-left: 60px;
-    align-items: center;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px; /* mesma altura do header */
+    left: 0;
     width: 100%;
+    background-color: #921b1c;
+    text-align: center;
+    z-index: 9999;
+    padding: 15px 0;
+    margin: 0;
 }
-
 .nav-links li {
     margin: 0 15px;
     font-family: ABeeZee, sans-serif;
@@ -101,20 +106,17 @@ nav {
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
-   header {
-        height: 81px; /* define a altura fixa da navbar */
-    }
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 55px; /* altura da navbar */
+        top: 30px; /* mesma altura do header */
         left: 0;
         width: 100%;
         background-color: #921b1c;
         text-align: center;
         z-index: 9999;
-        padding: 10px 0;
+        padding: 15px 0;
         margin: 0;
     }
 
