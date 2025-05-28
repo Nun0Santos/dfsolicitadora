@@ -1,28 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector("header");
-    const navLinks = document.querySelector(".nav-links");
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinkItems = document.querySelectorAll(".nav-links a");
+  const header = document.querySelector("header");
+  const navLinks = document.querySelector(".nav-links");
+  const menuToggle = document.getElementById("menu-toggle");
 
-    function updateMenuTop() {
-        if (header && navLinks) {
-            const height = header.offsetHeight;
-            const offset = 31;  // sobe o menu 30px em relação à base do header
-            navLinks.style.top = (height - offset) + "px";
-        }
+  function updateMenuTop() {
+    if (header && navLinks) {
+      const height = header.offsetHeight;
+      navLinks.style.top = height + "px"; // alinha com fundo do header
     }
+  }
 
-    updateMenuTop();
-    window.addEventListener("resize", updateMenuTop);
+  updateMenuTop();
+  window.addEventListener("resize", updateMenuTop);
 
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Fecha o menu quando se clica numa opção
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
     });
-
-    // Fecha o menu quando clicas numa opção do menu
-    navLinkItems.forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
-    });
+  });
 });

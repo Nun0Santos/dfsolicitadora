@@ -10,12 +10,12 @@ body {
 
 /* ===== Header ===== */
 header {
-    background-color: #8e1618;
-    padding: 5px 0;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
+  background-color: #8e1618;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav {
@@ -46,20 +46,24 @@ nav {
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative; /* necessário para .nav-links se posicionar bem */
 }
 
 /* Nav links como flex container */
 .nav-links {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin-left: 60px;
-    align-items: center;
-    width: 100%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: 60px;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-links li {
@@ -75,10 +79,10 @@ nav {
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* Estilo do botão */
@@ -102,18 +106,19 @@ nav {
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 150px;
-        left: 0;
-        width: 100%;
-        background-color: #921b1c;
-        text-align: center;
-        z-index: 9999;
-        padding: 15px 0;
-        margin: 0;
-    }
+    position: fixed;
+    top: 60px; /* será ajustado dinamicamente no JS */
+    right: 0px; /* encosta à direita */
+    width: 260px; /* largura reduzida */
+    background-color: #921b1c;
+    text-align: center;
+    z-index: 9999;
+    padding: 15px 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
 
     .nav-links.active {
         display: block;
@@ -144,11 +149,11 @@ nav {
     }
 }
 .menu-toggle {
-    display: none;       
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
 }
 
 @media (max-width: 768px) {
