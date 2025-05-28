@@ -85,30 +85,54 @@ nav {
 
 .menu-toggle {
     display: none;
-    font-size: 24px;
+    font-size: 28px;
     color: white;
     cursor: pointer;
+    user-select: none;
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        background-color: #0D1B2A;
-        top: 60px;
+        background-color: #8e1618; 
+        top: 60px; 
         right: 0;
         width: 100%;
         text-align: center;
+        z-index: 9999;
     }
     .nav-links.active {
         display: flex;
     }
-    .menu-toggle {
-        display: block;
+    .nav-links li {
+        margin: 15px 0;
     }
     .schedule-button {
         display: none;
+    }
+}
+@media (max-width: 768px) {
+    .service-item {
+        width: 48%;
+    }
+}
+@media (max-width: 480px) {
+    section {
+        padding: 30px 10px;
+    }
+}
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .intro-text {
+        text-align: center;
     }
 }
 
@@ -134,7 +158,11 @@ nav {
     margin: 20px;
     text-align: center;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .intro-image img {
     width: 100%;
     max-width: 250px;
