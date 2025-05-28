@@ -52,17 +52,26 @@ nav {
     width: 100%;
 }
 
+/* Nav links como flex container */
 .nav-links {
     list-style: none;
     display: flex;
     padding: 0;
     margin-left: 60px;
+    align-items: center;
+    width: 100%;
 }
 
 .nav-links li {
     margin: 0 15px;
     font-family: ABeeZee, sans-serif;
     line-height: 41.04px;
+}
+
+/* Botão dentro da lista empurrado para a direita */
+.nav-links li.schedule-button-li {
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .nav-links li a {
@@ -72,6 +81,7 @@ nav {
     font-weight: bold;
 }
 
+/* Estilo do botão */
 .schedule-button {
     background-color: #8e1618;
     color: white;
@@ -81,16 +91,15 @@ nav {
     cursor: pointer;
     border: 2px solid white;
     transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
 }
-.nav-links li a.schedule-button {
-    display: inline-block;
-    background-color: #e63946; /* exemplo de cor */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
+
+.schedule-button:hover {
+    background-color: white;
+    color: #8e1618;
 }
+
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -112,6 +121,7 @@ nav {
         margin: 15px 0;
     }
 
+    /* Botão fica maior e centralizado no menu mobile */
     .schedule-button {
         display: block;
         margin: 15px auto;
@@ -124,12 +134,14 @@ nav {
         border: 2px solid white;
         background-color: #e63946; 
     }
+
     .nav-container {
         position: relative; 
     }
 }
+
 .menu-toggle {
-    display: none;
+    display: none;       
     font-size: 28px;
     color: white;
     cursor: pointer;
@@ -138,45 +150,14 @@ nav {
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background-color: #8e1618; 
-        top: 60px; 
-        right: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 9999;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links li {
-        margin: 15px 0;
+        display: block;      
+        position: fixed;    
+        top: 15px;         
+        right: 15px;    
     }
 }
-@media (max-width: 768px) {
-    .service-item {
-        width: 48%;
-    }
-}
-@media (max-width: 480px) {
-    section {
-        padding: 30px 10px;
-    }
-}
-@media (max-width: 768px) {
-    .intro-container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-    .intro-text {
-        text-align: center;
-    }
-}
+
+/* ===== Outras seções (sem alterações) ===== */
 
 /* ===== Home Section ===== */
 #home {
@@ -407,4 +388,3 @@ footer {
     margin-top: 30px;
     font-size: 0.9em;
 }
-
