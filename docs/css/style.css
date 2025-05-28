@@ -15,8 +15,7 @@ header {
     position: fixed; 
     top: 0; 
     width: 100%; 
-    z-index: 1000;
-    height: 50px; /* altura fixa */
+    z-index: 1000; 
 }
 
 nav {
@@ -55,18 +54,14 @@ nav {
 
 /* Nav links como flex container */
 .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px; /* mesma altura do header */
-    left: 0;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: 60px;
+    align-items: center;
     width: 100%;
-    background-color: #921b1c;
-    text-align: center;
-    z-index: 9999;
-    padding: 15px 0;
-    margin: 0;
 }
+
 .nav-links li {
     margin: 0 15px;
     font-family: ABeeZee, sans-serif;
@@ -110,7 +105,7 @@ nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 30px; /* mesma altura do header */
+        top: 150px;
         left: 0;
         width: 100%;
         background-color: #921b1c;
@@ -161,7 +156,7 @@ nav {
         display: block;      
         position: fixed;    
         top: 15px;         
-        right: 15px;    
+        right: 15px;
     }
 }
 
