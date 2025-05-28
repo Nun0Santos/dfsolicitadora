@@ -121,24 +121,35 @@ nav {
         margin: 15px 0;
     }
 
-    /* Botão fica maior e centralizado no menu mobile */
+    /* Botão "Agendar Consulta" no mobile fica igual aos outros links */
     .schedule-button {
-        background: none;
-        color: white;
-        border: none;
-        padding: 0;
-        border-radius: 0;
+        background: none !important;
+        color: white !important;
+        border: none !important;
+        padding: 10px 0 !important;
+        border-radius: 0 !important;
+        font-weight: normal !important;
+        display: block !important;
+        width: auto !important;
+        text-align: center !important;
+        white-space: normal !important;
+        cursor: pointer !important;
+        transition: none !important;
+    }
+
+    /* Estilo dos links dentro do menu mobile */
+    .nav-links li a,
+    .nav-links li .schedule-button {
+        padding: 10px 0;
+        display: block;
+        font-family: ABeeZee, sans-serif;
         font-weight: normal;
-        display: inline; /* ou block para que ocupe toda a linha */
-        width: auto;
+        text-decoration: none;
+        color: white;
     }
 
     .nav-container {
         position: relative; 
-    }
-    .nav-links li a {
-        padding: 10px 0;
-        display: block;
     }
 }
 
