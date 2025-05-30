@@ -1,5 +1,4 @@
 /* ===== Body ===== */
-/* Geral */
 body {
     font-family: 'Roboto', sans-serif; /* Fonte padrão para o corpo do texto */
     margin: 0;
@@ -10,13 +9,13 @@ body {
 
 /* ===== Header ===== */
 header {
-  background-color: #8e1618;
-  padding: 5px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  min-height: 60px;
+    background-color: #8e1618;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    min-height: 60px;
 }
 
 nav {
@@ -47,26 +46,25 @@ nav {
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  width: 100%;
-  position: relative; /* necessário para .nav-links se posicionar bem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    width: 100%;
+    position: relative; /* necessário para .nav-links se posicionar bem */
 }
 
 /* Nav links como flex container */
 .nav-links {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin-left: 60px;
-  align-items: center;
-  width: 100%;
-  transition: top 0.2s ease;
-
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: 60px;
+    align-items: center;
+    width: 100%;
+    transition: top 0.2s ease;
 }
 
 .nav-links li {
@@ -82,10 +80,10 @@ nav {
 }
 
 .nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* Estilo do botão */
@@ -106,22 +104,40 @@ nav {
     color: #8e1618;
 }
 
-/* ===== Mobile ===== */
+/* Menu toggle para mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* ===== Nav Links Mobile ===== */
 @media (max-width: 768px) {
     .nav-links {
-    position: fixed;
-    top: 60px; /* será ajustado dinamicamente no JS */
-    right: 0px; /* encosta à direita */
-    width: 260px; /* largura reduzida */
-    background-color: #921b1c;
-    text-align: center;
-    z-index: 9999;
-    padding: 15px 0;
-    margin: 0;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
+        position: fixed;
+        top: 60px; /* será ajustado dinamicamente no JS */
+        right: 0;
+        width: 260px;
+        background-color: #921b1c;
+        text-align: center;
+        z-index: 9999;
+        padding: 15px 0;
+        margin: 0;
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
     .nav-links.active {
         display: block;
@@ -130,45 +146,24 @@ nav {
     .nav-links li {
         margin: 3px 0;
     }
-    .nav-container {
-        position: relative; 
-    }
+
     .nav-links li a {
         display: block;
         width: 100%;
         padding: 5px 0;
         text-align: center; /* centraliza o texto */
     }
-}
-@media (max-width: 768px) {
+
     .schedule-button {
         background: none;
-        padding: 6px 12px;        
+        padding: 6px 12px;
         color: white;
         font-weight: bold;
         display: inline-block;
         border: 2px solid white;
-        width: auto;             
+        width: auto;
     }
 }
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;      
-        position: fixed;    
-        top: 15px;         
-        right: 15px;
-    }
-}
-
-/* ===== Outras seções (sem alterações) ===== */
 
 /* ===== Home Section ===== */
 #home {
@@ -192,15 +187,17 @@ nav {
     margin: 20px;
     text-align: center;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+
 .intro-image img {
     width: 100%;
     max-width: 250px;
     height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .intro-text {
@@ -221,12 +218,6 @@ img {
     line-height: 1.6;
     font-size: 1.1em;
     margin-bottom: 20px;
-}
-
-/* ===== Section General ===== */
-section {
-    padding: 50px;
-    text-align: center;
 }
 
 /* ===== Services Section ===== */
@@ -306,6 +297,22 @@ section {
     color: #333;
 }
 
+.contact-general {
+    margin-bottom: 40px;
+}
+
+.contact-general h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-general p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -313,6 +320,7 @@ section {
     gap: 40px;
     padding: 20px;
 }
+
 .contact-block {
     width: 400px;
     text-align: center;
@@ -320,27 +328,10 @@ section {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .contact-block p {
-    min-height: 48px; 
+    min-height: 48px;
     margin-bottom: 10px;
-}
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    margin-bottom: 15;
-    text-align: center;
-}
-
-.contact-info h3 {
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 1.5em;
-}
-
-.contact-info p {
-    color: #555;
-    line-height: 1.6;
-    font-size: 1.1em;
 }
 
 .map-container {
