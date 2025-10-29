@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateMenuTop() {
     if (header && navLinks) {
       const height = header.offsetHeight;
-      navLinks.style.top = height + "px"; // alinha com fundo do header
+      navLinks.style.top = height + "px"; 
     }
   }
 
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle("active");
   });
 
-  // Fecha o menu quando se clica numa opção
   navLinks.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");

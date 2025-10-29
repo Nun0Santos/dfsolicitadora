@@ -1,6 +1,6 @@
 /* ===== Body ===== */
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte padrão para o corpo do texto */
+    font-family: 'Roboto', sans-serif; 
     margin: 0;
     padding: 0;
     color: #333;
@@ -53,10 +53,10 @@ nav {
     margin: auto;
     padding: 0 20px;
     width: 100%;
-    position: relative; /* necessário para .nav-links se posicionar bem */
+    position: relative; 
 }
 
-/* Nav links como flex container */
+/* ===== Navbar ===== */
 .nav-links {
     list-style: none;
     display: flex;
@@ -73,7 +73,6 @@ nav {
     line-height: 41.04px;
 }
 
-/* Botão dentro da lista empurrado para a direita */
 .nav-links li.schedule-button-li {
     margin-left: auto;
     margin-right: 0;
@@ -86,7 +85,6 @@ nav {
     font-weight: bold;
 }
 
-/* Estilo do botão */
 .schedule-button {
     background-color: #8e1618;
     color: white;
@@ -104,7 +102,7 @@ nav {
     color: #8e1618;
 }
 
-/* Menu toggle para mobile */
+/* Menu toggle mobile */
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -122,11 +120,11 @@ nav {
     }
 }
 
-/* ===== Nav Links Mobile ===== */
+/* ===== Navbar Mobile ===== */
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 60px; /* será ajustado dinamicamente no JS */
+        top: 60px; 
         right: 0;
         width: 260px;
         background-color: #921b1c;
@@ -151,7 +149,7 @@ nav {
         display: block;
         width: 100%;
         padding: 5px 0;
-        text-align: center; /* centraliza o texto */
+        text-align: center; 
     }
 
     .schedule-button {
