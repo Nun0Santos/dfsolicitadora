@@ -159,7 +159,19 @@ nav {
 
 /* ===== Home Section ===== */
 #home {
-    padding: 50px 20px;
+    height: 470px;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.45),
+        rgba(255, 255, 255, 0.45)
+    ), url("../img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ===== About Section ===== */
+#about {
+    padding: 20px 20px 50px;
     background-color: #fff;
     text-align: center;
 }
@@ -176,7 +188,7 @@ nav {
 .intro-image {
     flex: 1;
     min-width: 300px;
-    margin: 20px;
+    margin: 20px 20px 20px 0px;
     text-align: center;
 }
 
@@ -199,7 +211,7 @@ img {
     text-align: left;
 }
 
-.intro-text h1,
+#about h1,
 #services h2,
 #contact h2 {
     color: #333;
