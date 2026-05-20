@@ -359,6 +359,12 @@ img {
     margin: 5px 0;
 }
 
+.contact-general .contact-note {
+    font-size: 0.82em;
+    color: #777;
+    margin-top: 2px;
+}
+
 .contact-container {
     display: flex;
     align-items: center;
